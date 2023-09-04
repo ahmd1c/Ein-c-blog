@@ -1,0 +1,112 @@
+
+.login-cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+  }
+  
+.login-box {
+    width: 500px;
+    height: 310px;
+    padding: 50px 40px;
+    background-color: #09173196;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+  }
+  
+.login-box .user-box {
+    position: relative;
+  }
+  
+.login-box form .user-box:nth-child(1) {
+    padding-bottom: 1rem;
+  }
+  
+  .login-box form .user-box:nth-of-type(2) {
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+  }
+
+  .login-box .user-box input {
+    width: 100%;
+    padding-top: 5px;
+    padding-left: 3px;
+    font-size: 18px;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+  }
+  
+  .login-box .user-box label {
+    position: absolute;
+    top: -9px;
+    left: 0;
+    padding: 10px 0;
+    font-size: 22px;
+    color: #fff;
+    transition: .5s all;
+  }
+  
+  .login-box .user-box input::placeholder{
+    color: transparent;
+  }
+
+  
+
+  .login-box .user-box input:focus ~ label,
+  .login-box .user-box input:valid ~ label,
+  .login-box .user-box input:not(:placeholder-shown) ~ label{ 
+    top: -35px;
+    left: 0;
+    color: #b0b0b0;
+    font-size: 16px;
+  }
+  
+  .login-box form a{
+    color : rgb(223, 219, 191);
+    font-size: 16px;
+    text-decoration: none;
+  }
+
+.login-box form a:hover{
+    color : #fdfdfd;
+    text-decoration : underline;
+  }
+
+  .login-box form button {
+    display: inline-block;
+    margin-left: 2.2rem;
+    position: relative;
+    padding: 10px 18px;
+    border-radius: 10px;
+    color: #0d246a;
+    font-size: 20px;
+    font-weight: bold;
+    transition: .5s all;
+    margin-top: 40px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border: 1px solid transparent;
+  }
+  
+  .login-box button:hover {
+    background: #FBAE3C;
+    border: 1px solid #0d246a;
+    color: #1f1313;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #FBAE3C,
+                0 0 25px #FBAE3C,
+                0 0 50px #FBAE3C,
+                0 0 85px #FBAE3C;
+  }
+  
+
+  @media(max-width: 550px) {
+    .login-box {
+        margin-inline: 1rem;
+      }
+  }
