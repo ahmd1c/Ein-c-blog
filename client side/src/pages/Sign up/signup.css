@@ -1,0 +1,94 @@
+.signup-cont{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.signup-cont form{
+    width: 400px;
+    background-color: #09173196;
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    padding: 45px 15px;
+    padding-bottom: 35px;
+    border-radius: 7px;
+    box-shadow: 0px 6px 15px 0px rgba(22, 18, 43, 0.414),
+    0px 8px 20px 0px rgba(9, 13, 50, 0),
+    0px 10px 25px 0px rgba(12, 14, 41, 0.26);
+
+}
+.signup-cont form div {
+    display: flex;
+    width: 97%;
+    /* margin: 5px 5px; */
+    flex-direction: column;
+    margin-bottom: 10px;
+    position: relative;
+
+}
+.signup-cont form div input {
+    width: 100%;
+    padding: 5px 3px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #fff;
+    border-radius: 4px;
+    background: transparent;
+    transition: all .5s ease-in-out;
+    color: #fff;
+
+}
+
+
+.signup-cont form div input:focus ~ label,
+.signup-cont form div input:valid ~ label,
+.signup-cont form div[class="signup-email"] input:not(:placeholder-shown) ~ label
+{
+    top: -30px;
+    left: 0;
+    color: #8d8d8d;
+    font-size: 16px;
+}
+
+.signup-cont form div[class="signup-email"] input::placeholder{
+    color: transparent;
+}
+
+.signup-cont form div label{
+    font-size: 20px;
+    margin-bottom: 7px;
+    color: #fff;
+    position: absolute;
+    top:0;
+    left: 5px;
+    width: 100%;
+    transition: all .3s ease-in-out;
+
+}
+
+.signup-cont form button{
+    width: 120px;
+    padding: 10px 0;
+    margin: auto;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    color: #0d246a;
+    font-size: 20px;
+    font-weight: bold;
+    transition: .5s all;
+    border: 1px solid transparent;
+}
+
+.signup-cont form button:hover {
+    background: #FBAE3C;
+    /* border: 1px solid #0d246a; */
+    color: #1f1313;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #FBAE3C,
+                0 0 25px #FBAE3C,
+                0 0 50px #FBAE3C,
+                0 0 85px #FBAE3C;
+  }
+  
