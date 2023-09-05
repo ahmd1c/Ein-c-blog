@@ -1,0 +1,159 @@
+.single-post-cont{
+    padding : 2rem;
+    
+}
+.single-post-cont h1{
+    text-transform : capitalize;
+    margin-bottom : 1rem;
+    color : rgba(32, 215, 235, 0.858);
+    word-break: break-word;
+
+}
+
+.single-post-cont h2{
+    text-transform : capitalize;
+    margin-bottom : 1rem;
+    color : rgba(209, 200, 200, 0.881);
+    font-size : 1.3rem;
+    padding : .3rem .5rem;
+    word-break: break-word;
+
+}
+
+.single-post-cont .single-post-details{
+    display : flex;
+    align-items : center;
+    gap : 1rem 2rem;
+    margin-bottom : 1rem;
+    padding : 0 .5rem;
+
+
+}
+
+.single-post-cont .single-post-details span{
+    width : 210px;
+    color : rgba(209, 200, 200, 0.881);
+    display : flex;
+    flex-wrap : wrap;
+    justify-content : space-between;
+    align-items : center;
+    text-transform : capitalize;
+
+}
+
+.single-post-cont .single-post-details span a{
+    color : rgb(127, 109, 87);
+    font-weight : bold;
+}
+
+.single-post-cont .single-post-details span img{
+    width : 50px;
+    border-radius : 50%;
+    cursor : pointer;
+    margin-left : .2rem;
+}
+
+.single-post-cont p{
+    color : rgb(232, 216, 216);
+    font-size : 1.1rem;
+    text-transform : capitalize;
+    font-weight : 500; 
+    padding : .3rem .5rem;
+    line-height : 1.9;
+    word-break: break-word;
+}
+
+.single-post-cont .single-post-details small{
+    color : rgb(202, 191, 191);
+}
+
+.single-post-cont .post-fixed-details{
+    position: fixed;
+    left: 50%;
+    translate: -50% 0;
+    top: 85%;
+    z-index : 2121212;
+    width: 220px;
+    height: 45px;
+    padding: 10px;
+    background-color: wheat;
+    border-radius: 10px;
+    display: grid;
+    grid-auto-flow: column;
+    justify-items: center;
+}
+
+.single-post-cont .post-fixed-details span{
+    cursor: pointer;
+    
+
+}
+
+.single-post-cont .post-fixed-details span[data-name="edit"]{
+    translate : 0 -2px;
+    margin-inline: 8px;
+}
+
+
+.single-post-cont .post-fixed-details span[data-name="like"]::after,
+.single-post-cont .post-fixed-details span[data-name="comments"]::after
+{
+    content: attr(data-count);
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    font-size: 18px;
+    font-family: sans-serif;
+    color: black;
+    padding: 2px 5px;
+    border-radius: 4px;
+}
+
+
+@media(max-width:725px){
+    
+    .single-post-cont{
+        padding : .5rem;
+        margin-top : 1rem;
+    }
+    .single-post-cont h1{
+       font-size: 1.5rem;
+       margin-bottom : .5rem;
+    }
+    
+    .single-post-cont h2{
+        
+        font-size : 1.1rem;
+        padding : .3rem .2rem;
+    }
+    
+    .single-post-cont .single-post-details{
+        font-size : .8rem;
+        gap : .5rem;
+        padding : 0;
+        margin-bottom : .5rem;
+    
+    }
+    
+    .single-post-cont .single-post-details span{
+        width : 280px;
+        justify-content : space-around;
+        
+    }
+    
+    .single-post-cont .single-post-details span img{
+        width : 30px;
+    }
+
+    .single-post-cont p{
+        font-size : 1rem;
+        padding : .3rem .3rem;
+        line-height : 1.9;
+    }
+    .single-post-cont .post-fixed-details{
+        top : 90%;
+    }
+
+}
+
