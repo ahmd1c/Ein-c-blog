@@ -1,0 +1,117 @@
+
+.create-post-cont{
+    width: 100%;
+    padding: 1rem 1rem;
+    min-height : 100%;
+    
+}
+
+
+.create-post-cont form {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+    
+}
+
+
+.create-post-cont form input{
+    /* margin-left: 3.5rem; */
+    width : 70%;
+    border: none;
+    padding: 15px 10px;
+    font-size: 1.3rem;
+    border-radius: 10px;
+    outline: none;
+    background-color: rgb(35, 33, 33);
+    color: rgb(222, 216, 216)
+
+}
+
+.create-post-cont .create-post-photo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.create-post-cont .create-post-photo img{
+    width: 280px;
+    height: 200px;
+}
+
+
+.create-post-cont form textarea {
+    width: 100%;
+    resize: none;
+    /* border: none; */
+    outline: none;
+    font-size: 1.3rem;
+    font-weight: 500;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(35, 33, 33);
+    color: rgb(222, 216, 216)
+}
+
+
+.create-post-cont form textarea:first-of-type{
+    height: 105px;
+}
+
+.create-post-cont form textarea:nth-of-type(2){
+    height : 300px;
+}
+
+
+.create-post-cont form button{
+    width: 120px;
+    padding: 8px;
+    border-radius: 10px;
+    /* margin-left: 2rem; */
+    margin-top: .8rem;
+    outline: none;
+    border: transparent;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: .3s scale ease-in-out;
+}
+
+.create-post-cont form button:hover{
+    color: aliceblue;
+    font-weight: bold;
+    background-color: rgb(42, 42, 85);
+    scale: 1.1 1.1;
+}
+
+.create-post-cont form ::placeholder{
+    color : rgba(255, 255, 255, 0.501);
+    letter-spacing: 2px;
+}
+
+@media(max-width : 1105px ) {
+
+    .create-post-cont{
+        padding: 1rem .5rem;
+    }
+    
+  
+
+    .create-post-cont form input {
+       width: 100%;
+       margin-left: 0;
+       font-size: .7rem;
+    }
+
+
+  .create-post-cont form div textarea{
+    width : 100%;
+    font-size: .7rem;
+
+  }
+
+}
