@@ -1,0 +1,308 @@
+.user-settings-main form {
+    width : 100%;
+    background-color: rgba(27, 67, 67, 0.817);
+    padding : 1rem;
+    display : flex;
+    flex-direction : column;
+    align-items : center;
+
+    
+}
+
+
+.edit-photo{
+    
+    display: flex;
+    align-items: center;
+    flex-direction : column;
+    gap: 1.2rem;
+    
+    
+}
+
+
+.edit-photo img{
+    width: 170px;
+    border-radius: 50%;
+    box-shadow : 0 5px 5px rgba(35, 34, 34, 0.349);
+    aspect-ratio: 1;
+
+}
+.edit-photo .edit-photo-buttons{
+    display: flex;
+    gap: .7rem;
+
+}
+
+.edit-photo .edit-photo-buttons button{
+    padding: .5rem ;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    color: rgb(35, 28, 28);
+    cursor : pointer;
+    background-color : rgb(199, 187, 187);
+    box-shadow : 0 5px 5px rgb(35, 34, 34);
+    transition : 100ms all ease-in-out;
+
+}
+
+.edit-photo .edit-photo-buttons button:hover{
+    background-color : rgba(13, 13, 57, 0.973);
+    color : wheat;
+}
+
+
+.edit-userinfo{
+    width : 80%;
+    display : flex;
+    flex-direction : column;
+    gap : 1.5rem;
+
+}
+
+.edit-userinfo div{
+    display : flex;
+    width: 100%;
+    align-items : center;
+    gap : .7rem;
+    height : fit-content;
+    position : relative;
+   
+
+}
+
+.edit-userinfo div span{
+    position : absolute;
+    right : -5%;
+    top:25%;
+    color: #000;
+    cursor: pointer;
+    width: fit-content;
+    border-radius: 50%;
+    padding: .3rem;
+}
+.edit-userinfo div span:hover{
+    color: #fff;
+    background-color: rgb(14, 8, 42);
+}
+
+.edit-userinfo div:last-child span{
+    right : -10%;
+    top:50%;
+
+
+}
+
+.edit-userinfo  label {
+    /* text-align : center; */
+    /* padding-left : 10%; */
+    width : 10%;  
+    font-size : 18px;
+    color : rgb(223, 228, 227);
+    font-weight : 400;
+}
+
+.edit-userinfo  input{
+    width : 70%;
+    padding : .4rem .5rem;
+    margin-left: 2rem;
+    /* font-size : 16px; */
+    outline : none;
+    border-radius : 10px;
+    border : none;
+    box-shadow : 0 5px 5px rgb(35, 34, 34);
+    background-color : rgb(199, 187, 187);
+
+
+}
+
+.edit-userinfo textarea{
+    width : 100% ;
+    height : 150px;
+    outline : none;
+    margin-left: 2.5rem;
+    border-radius : 10px;
+    border : none;
+    padding : .3rem .5rem;
+    box-shadow : 0 5px 5px rgb(35, 34, 34);
+    background-color : rgb(199, 187, 187);
+
+}
+
+
+
+@media (max-width : 1175px) {
+    
+    .edit-userinfo  label {
+        width : 8%;  
+        font-size : 16px;
+    }
+    
+    .edit-userinfo  input{
+        width : 80%;
+        
+    }
+    
+    }
+    
+    @media(max-width:1095px){
+        .edit-userinfo  label {
+            width : 8%;  
+            font-size : 16px;
+        }
+        
+        .edit-userinfo  input{
+            width : 80%;
+            
+        }
+        
+        .edit-userinfo textarea{
+            margin-left: 1.5rem;
+            
+        }
+    
+    .edit-userinfo div span{
+        right : -10%;
+    
+    }
+    .edit-photo{
+        margin-left: 4rem;
+        
+    }
+    
+   
+}
+
+
+@media(max-width:900px){
+    
+
+    .edit-userinfo div{
+        flex-direction: column;
+        align-items : center;
+        gap : .7rem;
+    
+    }
+    
+    
+    
+
+.edit-userinfo div span{
+    top:50%;
+}
+
+.edit-userinfo div:last-child span{
+    right : -10%;
+
+}
+
+.edit-userinfo  label {
+    margin-right: 0;
+    text-align: center;
+    width: initial;
+    
+}
+
+.edit-userinfo  input{
+    width : 90%;
+    margin-left: 0;
+
+}
+
+.edit-userinfo textarea{
+    margin-left: 0;
+
+
+}
+
+.edit-photo{
+    margin-left: 0rem;
+    
+}
+
+
+
+}
+
+@media(max-width:750px){
+    
+    .edit-userinfo div span{
+        right : -8%;
+    
+    }
+    .edit-userinfo div:last-child span{
+        right : -14%;
+    }
+}
+
+@media(max-width:600px){
+    
+.edit-photo .edit-photo-buttons button{
+    padding: .4rem ;
+    font-size: 13px;
+}
+.edit-userinfo  input{
+    width : 90%;
+
+}
+
+.edit-userinfo{
+    width : 90%;
+
+}
+.edit-userinfo div span{
+    right : -8%;
+
+}
+.edit-userinfo div:last-child span{
+    right : -11%;
+}
+
+}
+
+
+@media(max-width:500px){
+    
+    
+    .edit-userinfo  input{
+        width : 95%;
+    
+    }
+    
+    .edit-userinfo div span{
+        right : -10%;
+    
+    }
+    .edit-userinfo div:last-child span{
+        right : -13%;
+    }
+    
+    }
+    
+
+    @media(max-width:450px){
+        
+        .edit-userinfo div span{
+            right : -12%;
+        
+        }
+        .edit-userinfo div:last-child span{
+            right : -15%;
+        }
+        
+        }
+        
+    @media(max-width:400px){
+        
+        .edit-userinfo div span{
+            right : -15%;
+        
+        }
+        .edit-userinfo div:last-child span{
+            right : -17%;
+        }
+        
+        }
+
