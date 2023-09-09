@@ -1,0 +1,102 @@
+.user-comments-cont{
+    width: 100%;
+    padding:1rem;
+    /* background-color: rgba(3, 13, 61, 0.483); */
+    border-radius: 10px;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+.user-comments-cont .single-comment-cont{
+    background-color: rgba(10, 15, 46, 0.67);
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.user-comments-cont .single-comment-box{
+    width : min(800px , 100%);
+    background-color: rgba(46, 16, 99, 0.446);
+    border-radius: 10px;
+    padding: .5rem;
+    color: #d6cccc;
+    word-break: break-word;
+    margin-bottom: .5rem;
+    /* position: relative; */
+}
+
+.user-comments-cont .single-comment-box .upper-details{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    margin-bottom: .6rem;
+}
+
+.user-comments-cont .single-comment-box .upper-details img{
+    width : 30px;
+    border-radius: 50%;
+    translate : 0 2px;
+    order : 1;
+    cursor: pointer;
+
+} 
+
+.user-comments-cont .single-comment-box .upper-details span{
+    order : 2;
+    color : rgba(238, 159, 31, 0.858);
+    font-weight: 600;
+    letter-spacing: .6px;
+    cursor: pointer;
+}
+
+.user-comments-cont .single-comment-box .upper-details .comment-modify-delete span{
+    color : rgba(229, 211, 211, 0.849)
+}
+
+
+.user-comments-cont .single-comment-box .upper-details .comment-modify-delete span:hover{
+    color : rgba(225, 2, 58, 0.858);
+}
+
+.user-comments-cont .single-comment-box p{
+    padding : 0;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    margin-top: .9rem;
+}
+
+.user-comments-cont .single-comment-box .lower-details span{
+    font-size: 16px;
+}
+
+.user-comments-cont .single-comment-cont h5{
+    color : wheat;
+    margin-left: .6rem;
+    
+}
+
+@media(max-width : 755px){
+    .user-comments-cont .single-comment-cont{
+        margin-left:1.5rem ;
+        padding-inline: .2rem ;
+    }
+    
+}
+
+@media(max-width : 550px){
+    .user-comments-cont{
+        padding-right:.3rem;
+        padding-left:.7rem;
+    }
+    .user-comments-cont .single-comment-cont{
+        padding-inline: .2rem ;
+    }
+
+    .user-comments-cont .single-comment-box p{
+        font-size: .8rem;
+    }
+    .user-comments-cont .single-comment-box .upper-details span:first-child{
+        font-size: 15px;
+    }
+
+}
