@@ -1,0 +1,103 @@
+
+.delete-account-cont{
+    width : 100%;
+    height : 100%;
+    background-color: rgba(27, 67, 67, 0.817);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.delete-account-cont h5{
+    color : rgb(252, 249, 249);
+    font-size: 23px;
+    background-color: rgba(209, 27, 27, 0.438);
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.delete-account-cont p{
+    color: aliceblue;
+    margin-bottom: 1rem;
+    font-size: 18px;
+
+}
+
+
+.delete-account-cont input{
+    padding : .4rem .5rem;
+    font-size : 20px;
+    font-weight: bold;
+    outline : none;
+    border-radius : 10px;
+    border : none;
+    box-shadow : 0 5px 5px rgb(35, 34, 34);
+    background-color : rgb(199, 187, 187);
+
+}
+
+
+.delete-account-button{
+    padding: .5rem;
+    background-color: rgba(209, 27, 27, 0.554);
+    color: rgb(254, 253, 236);
+    border: none;
+    border-radius: 10px;
+    margin-top: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow : 0 5px 5px rgb(35, 34, 34);
+    transition : 100ms all ease-in-out;
+}
+
+
+.delete-account-button:hover{
+    background-color : rgba(13, 13, 57, 0.973);
+    color : wheat;
+}
+
+@media(max-width:630px){
+    
+    .delete-account-cont{
+        padding-right: 1rem;
+        padding-left: 3rem !important;
+    }
+
+    .delete-account-cont h5{
+        font-size: 19px;
+        padding: .5rem;
+        line-height: 25px;
+    }
+    
+    .delete-account-cont p{
+        font-size: 15px;
+        padding: .5rem;
+    }
+
+    .delete-account-cont input{
+        padding : .4rem;
+        font-size : 17px;
+    }
+    
+    .delete-account-button{
+        padding: .4rem;
+        margin-top: 1.7rem;
+    }
+    
+    
+}
+
+
+@media(max-width:375px){
+    
+    
+    .delete-account-cont input{
+        padding : .3rem;
+        font-size : 16px;
+    }
+    
+    
+    
+}
