@@ -1,0 +1,128 @@
+.admin-cont {
+    display: flex;
+    min-height: calc(91vh - 78px);
+    position: relative;
+}
+
+.admin-aside {
+    
+    padding: 12px;
+    background-color: #072034a8;
+    box-shadow: 3px 0 5px rgb(24, 23, 23);
+    width: 200px;
+    position: relative;
+}
+
+.admin-aside-items-cont{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    width: 100%;
+    position: sticky;
+    top:  50%;
+    translate: 0 -50%;
+
+}
+
+.admin-aside-item {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.admin-aside-item:hover {
+    background-color: rgb(6, 59, 92);
+}
+
+.admin-aside-item h5 {
+    color: rgba(255, 255, 255, 0.901);
+    cursor: pointer;
+}
+
+.admin-aside-item span {
+    color: gainsboro;
+    cursor: pointer;
+}
+
+
+.admin-dashboard-cont {
+    background-color: rgba(27, 67, 67, 0.817);
+    width: 100%;
+    padding: 1rem;
+}
+
+.admin-cont .totals {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.admin-cont .totals div {
+    padding: 1rem;
+    display: flex;
+    flex-grow: .8;
+    margin : auto;
+    justify-content: space-between;
+    align-items: center;
+    background-color: gainsboro;
+    width: 220px;
+    height: 180px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 8px rgb(33, 33, 40);
+    font-size: 18px;
+}
+
+
+@media(max-width:853px){
+
+    .admin-aside-item h5 {
+       display: none;
+    }
+    .admin-aside {
+        width: max-content;
+    }
+    
+}
+
+@media(max-width : 720px){
+    .admin-cont {
+        min-height: calc(94.88vh - 78px);
+    }
+}
+
+
+@media(max-width:650px){
+    
+.admin-aside {
+    padding: 8px;
+}
+
+.admin-aside-item {
+    padding: 8px;
+}
+}
+
+
+@media(max-width:450px){
+
+    .admin-dashboard-cont {
+        background-color: rgba(27, 67, 67, 0.817);
+        width: 100%;
+        padding: .6rem;
+    }
+    
+    .admin-cont .totals div{
+        padding: .7rem;
+        gap: 5px;
+    }
+
+    .admin-cont .totals div h3{
+        font-size: 17px;
+    }
+
+}

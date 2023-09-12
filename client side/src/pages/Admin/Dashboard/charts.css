@@ -1,0 +1,22 @@
+
+.charts-cont{
+
+    margin-top: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap : 20px;
+    column-gap: 10%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.single-chart{
+    width:clamp(230px , 30vw ,99%);
+    height: 250px;
+    flex-grow: .6;
+    margin-inline: auto;
+}
+
+.single-chart tspan{
+    fill : rgba(255, 255, 255, 0.85);
+}
