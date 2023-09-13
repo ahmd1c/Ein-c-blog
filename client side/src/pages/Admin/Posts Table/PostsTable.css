@@ -1,0 +1,264 @@
+.admin-table-cont{
+    width : 100%;
+    padding : 1rem;
+    background-color : rgba(41, 117, 117, 0.604);
+    height : 100%;
+    overflow: auto;
+
+}
+
+.admin-table-cont table{
+    width : 100%;
+    overflow: auto;
+    border-spacing : 0px;
+    border-collapse: collapse;
+    background-color : rgba(12, 4, 31, 0.604);
+    border : 1px solid gray;
+    padding : 10px;
+    max-height : 466px;
+}
+.admin-table-cont table th{
+    border-bottom : 1px solid rgba(100, 172, 141, 0.941);
+    padding : .7rem;
+    text-align : left;
+    color : rgb(223, 217, 217);
+    box-shadow : 0px 3px 3px rgb(14, 1, 1);
+    
+}
+
+.admin-table-cont table th:first-child{
+    padding: .7rem 1.1rem;
+}
+
+
+.admin-table-cont table th:nth-child(3),
+.admin-table-cont table th:nth-child(4)
+{
+    text-align: center;
+}
+
+
+.admin-table-cont table tr th:nth-child(2){
+    width : 57%;
+}
+
+.admin-table-cont table tr td:nth-child(2){
+    width : 57%;
+}
+
+
+
+
+.admin-table-cont table td{
+    /* background-color: rgba(10, 56, 66, 0.869); */
+    padding: 1rem;
+    padding-bottom: .8rem;
+    color : white;    
+    border-bottom : 1px solid black;
+    box-shadow : 0px 1px 3px rgb(14, 1, 1) inset;
+    font-size: 18px;
+}
+
+
+.admin-table-cont table td .view-post{
+    padding: .3rem ;
+    font-size: 14px;
+    border: none;
+    border-radius: 7px;
+    font-weight: 600;
+    color: rgb(35, 28, 28);
+    cursor : pointer;
+    background-color : rgb(199, 187, 187);
+    box-shadow : 0 5px 5px rgb(35, 34, 34);
+    transition : 100ms all ease-in-out;
+    
+}
+
+.admin-table-cont table td .view-post:hover{
+    background-color : rgba(13, 13, 57, 0.973);
+    color : wheat;
+}
+
+
+.admin-table-cont table td:not(:nth-child(3),:nth-child(2)){
+    text-align : center;
+}
+
+.admin-table-cont table td span{
+    cursor : pointer;
+}
+
+.admin-table-cont table td span.delete:hover{
+    color: rgba(255, 0, 0, 0.938);
+}
+
+
+.admin-table-cont table td .delete-user-confirm{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.admin-table-cont table td button{
+    
+    padding: .4rem ;
+    font-size: 14px;
+    border: none;
+    border-radius: 7px;
+    font-weight: 600;
+    color: rgb(35, 28, 28);
+    cursor : pointer;
+    background-color : rgb(199, 187, 187);
+    box-shadow : 0 5px 5px rgb(35, 34, 34);
+    transition : 100ms all ease-in-out;
+    
+}
+
+.admin-table-cont table td button:hover{
+    background-color : rgba(13, 13, 57, 0.973);
+    color : wheat;
+}
+
+
+.admin-table-cont table td > div{
+    display : flex;
+    width : fit-content;
+    align-items : center;
+    gap : 10px
+}
+
+.admin-table-cont table td > div div h4{
+    font-size : 16px;
+    padding-bottom : 2px;
+    cursor : pointer;
+
+}
+.admin-table-cont table td > div div h5{
+    font-size : 14px;
+    font-weight : 400;
+    cursor : pointer;
+    width: max-content;
+}
+
+.admin-table-cont table td > div img{
+    width : 40px;
+    height : 40px;
+    border-radius : 50%;
+    cursor : pointer;
+
+}
+
+
+.admin-table-cont table th span{
+    display : flex;
+    align-items : center;
+}
+
+.admin-table-cont table th span span{
+    position : relative;
+}
+
+.admin-table-cont table th span span span{
+    position : absolute;
+    top : 50%;
+    right : 2%;
+    translate : 0 -50%;
+    color : rgb(51, 49, 49);
+    cursor : pointer;
+}
+
+
+.admin-table-cont table input[type="text"]{
+    margin-left : 10px;
+    padding : .2rem .3rem;
+    padding-right: 1.5rem;
+    outline : none;
+    border : none;
+    border-radius : 8px;
+    background : rgba(232, 231, 231, 0.898);
+
+}
+
+.admin-table-cont .delete-all{
+    padding: .5rem ;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    color: rgb(35, 28, 28);
+    cursor : pointer;
+    background-color : rgb(199, 187, 187);
+    box-shadow : 0 5px 5px rgb(35, 34, 34);
+    transition : 100ms all ease-in-out;
+    margin-bottom: 1.5rem;
+    margin-top: .7rem;
+    margin-right: .8rem;
+    float: right;
+}
+
+.admin-table-cont .delete-all:hover:not(:disabled){
+    background-color : rgba(13, 13, 57, 0.973);
+    color : wheat;
+}
+
+.admin-table-cont .delete-all:disabled{
+    cursor: not-allowed;
+    background-color : rgba(13, 13, 57, 0.485);
+    color : rgba(245, 222, 179, 0.492);
+
+}
+
+
+
+@media(max-width : 815px){
+    
+    .admin-table-cont{
+        padding: 5px;
+        overflow-x: auto;
+        
+    }
+    
+    
+    .admin-table-cont table{
+        padding : 8px;
+        width : 100%;
+    }
+    
+    .admin-table-cont table th{
+        padding : .5rem;
+        box-shadow : 0px 2px 3px rgb(14, 1, 1);
+        font-size : 14px;
+    }
+    
+    
+/*     
+    .admin-table-cont table tr td:nth-child(2){
+        width : 90%;
+    } */
+    
+    
+    
+    .admin-table-cont table td{
+        padding: .8rem;
+    }
+    
+    .admin-table-cont table td > div{
+        flex-wrap: wrap;
+        gap : 8px
+    }
+    
+    .admin-table-cont table td > div div h4{
+        font-size : 14px;
+    
+    }
+    .admin-table-cont table td > div div h5{
+        font-size : 12px;
+    }
+    
+    .admin-table-cont table td > div img{
+        width : 30px;
+        height : 30px;    
+    }
+
+
+}
