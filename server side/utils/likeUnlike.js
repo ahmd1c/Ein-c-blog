@@ -1,64 +1,32 @@
 const mongoose = require("mongoose");
 
-exports.likeFunction = async( req , res , docId , model)=>{
+exports.likeFunction = async (req, res, docId, model) => {
 
-    if (mongoose.isValidObjectId(docId)) {
-        
-        const likerId = req.userId;
-        let doc = await model.findById(docId)
-        
-    
-        if (doc && !doc.likes.includes(likerId) ) {
-            doc.likes.push(likerId)
-            if(doc.comment) await doc.populate("user", "_id name profilePhoto")
-            await doc.save()
-            return res.status(200).json
-            ({
-                state: "liked",
-                data: doc,
-            });
-    
-        }else if(doc && doc.likes.includes(likerId)){
-            if(doc.comment){ 
-                doc = await model.findByIdAndUpdate(docId,{$pull:{likes:likerId}},{new:true}).populate("user", "_id name profilePhoto")
-            }else{
-                doc = await model.findByIdAndUpdate(docId,{$pull:{likes:likerId}},{new:true})
+  if (!mongoose.isValidObjectId(docId))
+    return res.status(400).json({ state: "invalid id" });
 
-            }
-            return res.status(200).json
-            ({
-                state: "unliked",
-                data: doc,
-            });
-        }else{
-            return res.sendStatus(404)
-        }        
+  const likerId = req.userId;
+  let doc = await model.findById(docId);
 
-    }else{
-        console.log(docId)
-        res.sendStatus(400)
-    }
-}
+  if (!doc) return res.status(404).json({ state: "document not found" });
 
+  if (!doc.likes.includes(likerId)) {
 
+    doc = await doc.updateOne({ $push: { likes: likerId } }, { new: true });
+    // TO IDENTIFY THE TYPE OF DOC WHETHER COMMENT OR POST
+    if (doc.comment) await doc.populate("user", "_id name profilePhoto");
+    return res.status(200).json({
+      state: "liked",
+      data: doc,
+    });
 
-// original code for Posts only
-//   if (mongoose.isValidObjectId(postId)) {
+  } else {
+    doc = await doc.updateOne({ $pull: { likes: likerId } }, { new: true });
+    if (doc.comment) await doc.populate("user", "_id name profilePhoto");
+    return res.status(200).json({
+      state: "unliked",
+      data: doc,
+    });
+  }
+};
 
-//     const likerId = req.userId;
-//     let post = await Posts.findById(postId)
-
-//     if (post && !post.likes.includes(likerId) ) {
-//         post = await Posts.findByIdAndUpdate(postId,{$push:{likes:likerId}},{new:true})
-
-//     }else if(post && post.likes.includes(likerId)){
-//         post = await Posts.findByIdAndUpdate(postId,{$pull:{likes:likerId}},{new:true})
-
-//     }else{
-//         res.sendStatus(404)
-//     }
-//     res.status(200).json({
-//         state: "success",
-//         data: post,
-//     });
-// }
